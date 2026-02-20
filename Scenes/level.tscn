@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://cb6y2jieatrmt"]
 
+[ext_resource type="Script" uid="uid://bdxk8ml3vl3ol" path="res://Scenes/level.gd" id="1_81xng"]
 [ext_resource type="PackedScene" uid="uid://bsg672ds7ax4e" path="res://Scenes/paddle.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://bwthlo64pi2gx" path="res://Scenes/ball.tscn" id="2_k5f4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5f4k"]
-size = Vector2(15.000033, 1143.5)
+size = Vector2(15.000033, 1138.75)
 
 [node name="Level" type="Node2D" unique_id=307091483]
+script = ExtResource("1_81xng")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=761507906]
 position = Vector2(576, 318)
@@ -24,7 +26,7 @@ position = Vector2(-2.5, 321)
 shape = SubResource("RectangleShape2D_k5f4k")
 
 [node name="Right Wall" type="CollisionShape2D" parent="Walls" unique_id=1221510383]
-position = Vector2(1152, 318)
+position = Vector2(1152, 320.375)
 shape = SubResource("RectangleShape2D_k5f4k")
 
 [node name="Ceiling" type="CollisionShape2D" parent="Walls" unique_id=704538560]
