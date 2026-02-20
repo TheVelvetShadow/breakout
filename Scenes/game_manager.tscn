@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6dkrigf23yf5"]
+
+[ext_resource type="Script" uid="uid://xyi5thcx8onl" path="res://Scripts/game_manager.gd" id="1_oj352"]
+
+[node name="GameManager" type="Node" unique_id=650639701]
+script = ExtResource("1_oj352")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1838697113]
+
+[node name="Score" type="Label" parent="CanvasLayer" unique_id=571079611]
+offset_left = 619.0
+offset_top = 596.0
+offset_right = 659.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+
+[node name="Level" type="Label" parent="CanvasLayer" unique_id=2111502678]
+offset_left = 989.0
+offset_top = 606.0
+offset_right = 1029.0
+offset_bottom = 648.0
+scale = Vector2(1, 0.6000378)
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 2

@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cb6y2jieatrmt"]
 
-[ext_resource type="Script" uid="uid://bdxk8ml3vl3ol" path="res://Scenes/level.gd" id="1_81xng"]
+[ext_resource type="Script" uid="uid://bdxk8ml3vl3ol" path="res://Scripts/level.gd" id="1_81xng"]
 [ext_resource type="PackedScene" uid="uid://bsg672ds7ax4e" path="res://Scenes/paddle.tscn" id="1_tumq0"]
 [ext_resource type="PackedScene" uid="uid://bwthlo64pi2gx" path="res://Scenes/ball.tscn" id="2_k5f4k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k5f4k"]
 size = Vector2(15.000033, 1138.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6phgx"]
+size = Vector2(1123, 20)
 
 [node name="Level" type="Node2D" unique_id=307091483]
 script = ExtResource("1_81xng")
@@ -33,3 +36,11 @@ shape = SubResource("RectangleShape2D_k5f4k")
 position = Vector2(575.25, -0.50000834)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_k5f4k")
+
+[node name="deathzone" type="Area2D" parent="." unique_id=1704650950]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="deathzone" unique_id=1183523029]
+position = Vector2(578, 656)
+shape = SubResource("RectangleShape2D_6phgx")
+
+[connection signal="body_entered" from="deathzone" to="Ball" method="_on_deathzone_body_entered"]
